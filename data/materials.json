@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cantera-columns",
+    "category": "cantera",
+    "icon": "ti-column-insert",
+    "title": "Cantera Columns",
+    "summary": "Hand-turned column shafts and capitals cut from volcanic cantera, our founding specialty since 1999."
+  },
+  {
+    "id": "cantera-carved-stone",
+    "category": "cantera",
+    "icon": "ti-hammer",
+    "title": "Carved Cantera Panels",
+    "summary": "Relief-carved medallions, cartouches, and address plaques cut to your pattern or ours."
+  },
+  {
+    "id": "indiana-limestone",
+    "category": "limestone",
+    "icon": "ti-brick",
+    "title": "Indiana Limestone",
+    "summary": "Fine, even-grained limestone for trim, banding, and facades that need a crisp, consistent finish."
+  },
+  {
+    "id": "texas-limestone",
+    "category": "limestone",
+    "icon": "ti-map-2",
+    "title": "Texas Cream Limestone",
+    "summary": "Locally quarried Hill Country limestone with the warm tone North Texas builders ask for by name."
+  },
+  {
+    "id": "carrara-marble",
+    "category": "marble",
+    "icon": "ti-droplet",
+    "title": "Carrara Marble",
+    "summary": "Soft grey veining for interior surrounds, tub decks, and vanity tops that read as quietly formal."
+  },
+  {
+    "id": "emperador-marble",
+    "category": "marble",
+    "icon": "ti-flame",
+    "title": "Emperador Marble",
+    "summary": "Deep brown marble with dramatic veining, popular for fireplace surrounds and bar tops."
+  },
+  {
+    "id": "balustrades",
+    "category": "architectural",
+    "icon": "ti-stairs",
+    "title": "Balustrades & Newels",
+    "summary": "Turned or hand-carved stone balustrade sets sized to your stair run or terrace edge."
+  },
+  {
+    "id": "window-surrounds",
+    "category": "architectural",
+    "icon": "ti-window",
+    "title": "Window & Door Surrounds",
+    "summary": "Cast or carved surrounds, keystones, and quoins that give an elevation real depth."
+  },
+  {
+    "id": "veneer-facades",
+    "category": "facades",
+    "icon": "ti-building-arch",
+    "title": "Thin Stone Veneer",
+    "summary": "Lightweight veneer panels for retrofits where full-bed stone isn't structurally practical."
+  },
+  {
+    "id": "full-bed-facades",
+    "category": "facades",
+    "icon": "ti-building-monument",
+    "title": "Full-Bed Facades",
+    "summary": "Structural stone cladding cut to spec for commercial fronts, entries, and monument signage."
+  }
+]

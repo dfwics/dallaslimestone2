@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Dallas Limestone</title>
+<meta name="description" content="Common questions about ordering, sourcing, and installing cantera, limestone, marble, and stone fireplace mantels from Dallas Limestone.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body data-page="faq">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="/">Home</a> / FAQ</p>
+      <span class="eyebrow">FAQ</span>
+      <h1>Questions we get before a quote</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:780px;">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="true">
+          How long does a custom carved piece take?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer is-open">
+          <p>Most custom cantera or marble pieces take 3–6 weeks from approved design to delivery, depending on carving complexity and current shop load. In-stock mantels and common profiles are available immediately.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you install, or just fabricate?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Both. Our own rigging and delivery crews handle installation — we don't hand pieces off to a third-party installer, which matters once you're talking about anything load-bearing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you match stone that's already on my house?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Usually, yes. Bring a sample or clear photos and we'll identify the stone type and quarry characteristics, then cut a replacement piece to match rather than the closest thing in stock.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you work directly with homeowners, or only builders?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Both. Roughly half our work is with builders and architects on new construction, and half is homeowners adding a mantel, a fountain, or a hardscaping project to an existing property.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What's the difference between cantera and limestone?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Cantera is a volcanic stone that carves and turns more cleanly, which is why it's our specialty for columns and relief carving. Limestone is sedimentary, generally more budget-friendly, and better suited to large flat surfaces like facades and banding. See the <a href="/materials/">Materials page</a> for a side-by-side look.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you ship or install outside North Texas?
+          <span class="faq-icon"><i class="ti ti-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>We regularly deliver and install within the greater Dallas–Fort Worth area. For projects farther out, we can typically arrange freight for fabricated pieces — call to confirm for your location.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--surface" style="text-align:center;">
+    <div class="wrap">
+      <h2>Still have a question?</h2>
+      <p class="muted">Call (972) 555-0147 or send us a quote request and we'll follow up directly.</p>
+      <a class="btn btn-primary" href="/get-quote/">Request a quote</a>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="/js/nav.js"></script>
+<script>
+  // Single-level accordion — no nested sub-panels (build brief §4.3).
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".faq-question").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+        btn.nextElementSibling.classList.toggle("is-open", !expanded);
+      });
+    });
+  });
+</script>
+</body>
+</html>

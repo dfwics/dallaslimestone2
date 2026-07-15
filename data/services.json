@@ -1,0 +1,65 @@
+[
+  {
+    "id": "columns-bases",
+    "category": "structural",
+    "icon": "ti-column-insert",
+    "title": "Columns & Bases",
+    "summary": "Load-bearing and decorative columns turned to spec, with matching bases and capitals."
+  },
+  {
+    "id": "headers-sills",
+    "category": "structural",
+    "icon": "ti-window",
+    "title": "Headers & Sills",
+    "summary": "Precision-cut lintels and sills that carry load while keeping a clean sightline."
+  },
+  {
+    "id": "fountains",
+    "category": "outdoor",
+    "icon": "ti-droplet",
+    "title": "Fountains",
+    "summary": "Courtyard and garden fountains carved to order, plumbed and ready for installation."
+  },
+  {
+    "id": "pool-coping-pavers",
+    "category": "outdoor",
+    "icon": "ti-wave-sine",
+    "title": "Pool Coping & Pavers",
+    "summary": "Slip-resistant coping and paver sets cut to your pool's exact radius and edge detail."
+  },
+  {
+    "id": "hardscaping",
+    "category": "outdoor",
+    "icon": "ti-layout-grid",
+    "title": "Hardscaping",
+    "summary": "Patios, steps, and retaining walls built from stone that ages the way poured concrete never will."
+  },
+  {
+    "id": "kitchens-range-hoods",
+    "category": "interior",
+    "icon": "ti-chef-hat",
+    "title": "Kitchens & Range Hoods",
+    "summary": "Carved stone range hoods and counter surrounds sized to fit your existing cabinetry."
+  },
+  {
+    "id": "hand-carved-fabrication",
+    "category": "craft",
+    "icon": "ti-hammer",
+    "title": "Hand-Carved Fabrication",
+    "summary": "Custom carving from a drawing, a photo, or a piece you bring in — our cantera specialty."
+  },
+  {
+    "id": "stone-id-restoration",
+    "category": "craft",
+    "icon": "ti-search",
+    "title": "Stone ID & Restoration",
+    "summary": "We identify aging or mismatched stone and cut replacement pieces that actually match."
+  },
+  {
+    "id": "installation-transport",
+    "category": "logistics",
+    "icon": "ti-truck",
+    "title": "Installation & Transport",
+    "summary": "In-house rigging and delivery crews, because stone this heavy can't be handed off twice."
+  }
+]

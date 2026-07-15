@@ -1,0 +1,40 @@
+# 301 redirects: old WordPress/Divi URLs -> new consolidated pages.
+# Format (Netlify): /old-path  /new-path  301
+# If hosting elsewhere, see .htaccess (Apache) for the same mapping.
+
+# Materials (old standalone pages -> /materials/ sections)
+/cantera/                    /materials/#cantera-columns        301
+/limestone/                  /materials/#texas-limestone         301
+/marble/                     /materials/#carrara-marble          301
+/architectural-stone/        /materials/#balustrades             301
+/building-facades/           /materials/#full-bed-facades        301
+
+# Services (old standalone pages -> /services/ sections)
+/columns-bases/              /services/#columns-bases            301
+/fountains/                  /services/#fountains                301
+/headers-sills/              /services/#headers-sills            301
+/kitchens-range-hoods/       /services/#kitchens-range-hoods     301
+/pool-coping-pavers/         /services/#pool-coping-pavers       301
+/hardscaping/                /services/#hardscaping              301
+/hand-carved-fabrication/    /services/#hand-carved-fabrication  301
+/stone-id-restoration/       /services/#stone-id-restoration     301
+/installation-transport/     /services/#installation-transport   301
+
+# Fireplaces & Mantels (kept standalone, just a slug change)
+/fireplaces/                 /fireplaces-mantels/                301
+/mantels/                    /fireplaces-mantels/                301
+/fireplaces-and-mantels/     /fireplaces-mantels/                301
+
+# Misc legacy pages folded into consolidated destinations
+/testimonials/                /about/                            301
+/our-story/                   /about/                            301
+/why-choose-us/                /about/                            301
+/portfolio/                   /gallery/                          301
+/projects/                    /gallery/                          301
+/request-a-quote/             /get-quote/                        301
+/get-a-quote/                 /get-quote/                        301
+/contact-us/                  /contact/                          301
+
+# Shop only redirects if WooCommerce is not rebuilt — point to Contact
+# until/unless the client confirms online sales and this section is rebuilt.
+/shop/*                       /contact/                          301
