@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallas Limestone — Founded upon The Rock</title>
+    <!-- Google Fonts: Elegant Serif (Playfair) & Modern Sans (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            cream: '#F7F5F0',
+                            charcoal: '#1B232A',
+                            sand: '#BFA37E',
+                            pool: '#3B5566',
+                            muted: '#6E767E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-stone-cream text-stone-charcoal font-sans antialiased">
+
+    <!-- Top Announcement Bar (Faber CNK Style) -->
+    <div class="bg-stone-charcoal text-stone-cream text-xs tracking-widest py-2.5 px-4 text-center border-b border-white/10 uppercase">
+        <span>Hand-Carved in Mesquite, Texas Since 1999 • Call Today: <a href="tel:+19722039816" class="hover:text-stone-sand transition-colors">+1 (972) 203-9816</a></span>
+    </div>
+
+    <!-- Navigation Header (Cooper Stone Minimalist Style) -->
+    <header class="sticky top-0 z-50 bg-stone-cream/95 backdrop-blur-md border-b border-stone-charcoal/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo Area -->
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-xl sm:text-2xl tracking-[0.18em] font-semibold text-stone-charcoal uppercase leading-none">Dallas Limestone</span>
+                <span class="text-[9px] tracking-[0.3em] text-stone-muted uppercase mt-1">Founded Upon The Rock</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+                <a href="#about" class="text-stone-charcoal hover:text-stone-sand transition-colors">Our Story</a>
+                <a href="#portfolio" class="text-stone-charcoal hover:text-stone-sand transition-colors">Stone Catalog</a>
+                <a href="#calculator" class="text-stone-charcoal hover:text-stone-sand transition-colors">Estimator Tool</a>
+                <a href="#contact" class="text-stone-charcoal hover:text-stone-sand transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-block border border-stone-charcoal px-6 py-2.5 text-xs tracking-widest uppercase font-medium hover:bg-stone-charcoal hover:text-stone-cream transition-all duration-300">
+                    Request Quote
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-stone-charcoal focus:outline-none p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-stone-cream border-t border-stone-charcoal/10 px-6 py-4 space-y-4 text-xs tracking-widest uppercase font-medium">
+            <a href="#about" class="block py-2 text-stone-charcoal hover:text-stone-sand">Our Story</a>
+            <a href="#portfolio" class="block py-2 text-stone-charcoal hover:text-stone-sand">Stone Catalog</a>
+            <a href="#calculator" class="block py-2 text-stone-charcoal hover:text-stone-sand">Estimator Tool</a>
+            <a href="#contact" class="block py-2 text-stone-charcoal hover:text-stone-sand">Contact</a>
+            <a href="#contact" class="block w-full text-center border border-stone-charcoal py-3 mt-4 hover:bg-stone-charcoal hover:text-stone-cream">Request Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Blended Minimalist & Traditional Vibe) -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-stone-charcoal">
+        <!-- High-End Background Image (Luxury Limestone Villa Poolside) -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-65 scale-105 transition-transform duration-[10s]" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1800');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-stone-charcoal/80 to-stone-charcoal/40"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-20 text-center md:text-left w-full z-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-8 text-stone-cream">
+                <span class="text-xs uppercase tracking-[0.3em] text-stone-sand font-semibold block mb-4">Architectural Cut Stone & Cantera</span>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-light tracking-wide leading-tight mb-6">
+                    Crafting Texas Stone Into <span class="italic font-normal text-stone-sand">Timeless</span> Architecture
+                </h1>
+                <p class="text-sm sm:text-base text-stone-cream/80 max-w-xl font-light leading-relaxed mb-8">
+                    For over two decades, Dallas Limestone has hand-carved natural stone from our studio in Mesquite, Texas. We blend the structural permanence of historic Texas masonry with clean, modern architectural design.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#portfolio" class="bg-stone-sand text-stone-charcoal font-semibold text-xs tracking-widest uppercase px-8 py-4 hover:bg-stone-cream transition-all duration-300 shadow-lg">
+                        Explore Catalog
+                    </a>
+                    <a href="#calculator" class="border border-stone-cream/40 text-stone-cream font-medium text-xs tracking-widest uppercase px-8 py-4 hover:bg-stone-cream hover:text-stone-charcoal transition-all duration-300">
+                        Coping Calculator
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage & Brand Introduction (Cooper Stone Heritage Style) -->
+    <section id="about" class="py-24 bg-stone-charcoal text-stone-cream border-t border-b border-stone-sand/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Brand Narrative -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.2em] text-stone-sand font-semibold block">Founded Upon The Rock</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-light tracking-wide">
+                        In-House Craftsmanship. <br><span class="italic text-stone-sand">No Shortcuts.</span>
+                    </h2>
+                    <p class="text-sm text-stone-cream/70 leading-relaxed font-light">
+                        Unlike distributors that merely warehouse imported pallets, Dallas Limestone is a functional fabrication and hand-carving studio based right here in Mesquite, Texas. We source only the finest natural raw stone blocks, working alongside award-winning custom home builders, landscape designers, and architects.
+                    </p>
+                    <p class="text-sm text-stone-cream/70 leading-relaxed font-light">
+                        Our stone carvers shape premium limestone, travertine, and cantera into precise architectural elements that endure for generations, perfectly mirroring the meticulous standards seen in Texas's most prominent legacy estates.
+                    </p>
+                    <!-- Small Badges -->
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 text-center lg:text-left">
+                        <div>
+                            <span class="block font-serif text-2xl lg:text-3xl font-light text-stone-sand">25+</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-cream/60">Years of Experience</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl lg:text-3xl font-light text-stone-sand">100%</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-cream/60">In-House Carving</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl lg:text-3xl font-light text-stone-sand">Direct</span>
+                            <span class="text-[10px] uppercase tracking-widest text-stone-cream/60">Quarry Sourced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Picture with Border Detail -->
+                <div class="lg:col-span-5 relative p-4 border border-stone-sand/30">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200" alt="Detail Carved Stone" class="w-full h-[450px] object-cover grayscale brightness-95">
+                    <div class="absolute -bottom-4 -right-4 bg-stone-sand text-stone-charcoal px-6 py-4 text-xs font-serif italic font-semibold">
+                        Master Masonry
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stone Collections & Filter Grid (Faber CNK Modern Layout Style) -->
+    <section id="portfolio" class="py-24 bg-stone-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-stone-sand font-semibold block mb-3">Sourced and Refined</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-light text-stone-charcoal tracking-wide">
+                    The Stone Collections
+                </h2>
+                <div class="h-[1px] w-16 bg-stone-sand mx-auto mt-4"></div>
+            </div>
+
+            <!-- Tab Filters -->
+            <div class="flex flex-wrap justify-center space-x-2 md:space-x-4 mb-12 text-xs tracking-widest uppercase font-medium">
+                <button onclick="filterCatalog('all')" id="tab-all" class="catalog-tab px-5 py-3 border border-stone-charcoal bg-stone-charcoal text-stone-cream transition-all duration-300">
+                    All Stone
+                </button>
+                <button onclick="filterCatalog('carved')" id="tab-carved" class="catalog-tab px-5 py-3 border border-stone-charcoal/20 hover:border-stone-charcoal transition-all duration-300">
+                    Architectural Carvings
+                </button>
+                <button onclick="filterCatalog('pool')" id="tab-pool" class="catalog-tab px-5 py-3 border border-stone-charcoal/20 hover:border-stone-charcoal transition-all duration-300">
+                    Pool & Patios
+                </button>
+                <button onclick="filterCatalog('veneer')" id="tab-veneer" class="catalog-tab px-5 py-3 border border-stone-charcoal/20 hover:border-stone-charcoal transition-all duration-300">
+                    Thin Veneer
+                </button>
+            </div>
+
+            <!-- Catalog Grid -->
+            <div id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Carving -->
+                <div class="catalog-item carved group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Custom Mantels & Fireplaces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-charcoal text-stone-cream text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Architectural</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Mantels & Fireplaces</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            Hand-carved designs range from rustic traditional hearths to minimalist, clean-cut modern fireplaces tailored to exact room dimensions.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Custom CAD Design Included</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Pool & Patio -->
+                <div class="catalog-item pool group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=800" alt="Premium Travertine Pavers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-pool text-stone-cream text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Pool & Patio</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Travertine & Limestone Coping</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            Available in Bullnose, Drop-Face, and Sawn-Edge patterns. Stays cool under the harsh Texas sun, ensuring absolute poolside elegance.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Sawn & Delivered Nationwide</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Veneer -->
+                <div class="catalog-item veneer group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=800" alt="Limestone Thin Veneer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-sand text-stone-charcoal text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Thin Veneer</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Dimensional Cream Ashlar</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            Featuring Cooper Stone-inspired classic 4-6-8 coursed patterns and Castle Grey tones. Light, modern, and easily adhered to any structure.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Available in Full & Thin Veneer</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Carving -->
+                <div class="catalog-item carved group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&q=80&w=800" alt="Majestic Pillars & Columns" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-charcoal text-stone-cream text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Architectural</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Grand Columns & Bases</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            Stately, solid or hollow wrap columns custom carved in Tuscan, Corinthian, and minimalist modern profiles to support grand entrances.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Handcrafted to Precision</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Pool & Patio -->
+                <div class="catalog-item pool group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=800" alt="Cantera Natural Stone Courtyard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-pool text-stone-cream text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Pool & Patio</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Cantera Stone Pavers</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            Distinctive, luxurious natural texture in shades of Tobacco, Pinon, and custom grays. Elegant French pattern layouts for spacious patios.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Slip Resistant & Durable</span>
+                    </div>
+                </div>
+
+                <!-- Card 6: Veneer -->
+                <div class="catalog-item veneer group relative bg-white border border-stone-charcoal/5 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800" alt="Ledgestone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-stone-sand text-stone-charcoal text-[10px] uppercase tracking-widest px-3 py-1.5 font-medium">Thin Veneer</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-stone-charcoal mb-2">Stacked Ledge & Rubble Rock</h3>
+                        <p class="text-xs text-stone-muted leading-relaxed font-light mb-4">
+                            A highly detailed linear aesthetic. Deep-cast profiles reflect shadows beautifully along landscape accent walls and fireplace surroundings.
+                        </p>
+                        <span class="text-[10px] uppercase tracking-widest font-semibold text-stone-sand">Textured & Uniform Edges</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Coping & Stone Estimator Widget (Faber CNK Toolkit Inspiration) -->
+    <section id="calculator" class="py-24 bg-stone-charcoal text-stone-cream">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-[0.25em] text-stone-sand font-semibold block mb-3">Contractor & Architect Tool</span>
+                <h2 class="font-serif text-3xl font-light tracking-wide">Coping & Paver Material Estimator</h2>
+                <p class="text-xs text-stone-cream/60 max-w-md mx-auto mt-2">
+                    Quickly estimate raw material needs, including recommended layout waste factors.
+                </p>
+            </div>
+
+            <div class="bg-[#242E37] border border-stone-sand/20 p-8 md:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest font-semibold text-stone-sand mb-2">Project Type</label>
+                            <select id="calcType" onchange="updateCalculatorUnits()" class="w-full bg-stone-charcoal border border-stone-cream/20 text-stone-cream px-4 py-3 text-sm focus:outline-none focus:border-stone-sand">
+                                <option value="pool-coping">Pool Coping (Linear Feet)</option>
+                                <option value="patio-paver">Patio Pavers / Flooring (Sq. Footage)</option>
+                                <option value="veneer-wall">Stone Veneer Walls (Sq. Footage)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label id="inputLabel" class="block text-xs uppercase tracking-widest font-semibold text-stone-sand mb-2">Linear Feet Needed</label>
+                            <input type="number" id="calcInput" placeholder="Enter quantity" value="100" class="w-full bg-stone-charcoal border border-stone-cream/20 text-stone-cream px-4 py-3 text-sm focus:outline-none focus:border-stone-sand">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest font-semibold text-stone-sand mb-2">Waste & Cutting Margin</label>
+                            <select id="calcWaste" class="w-full bg-stone-charcoal border border-stone-cream/20 text-stone-cream px-4 py-3 text-sm focus:outline-none focus:border-stone-sand">
+                                <option value="1.10">10% Recommended (Standard Layouts)</option>
+                                <option value="1.15">15% Recommended (French/Versailles Pattern)</option>
+                                <option value="1.05">5% Minimum (Simple Linear Bond)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Outputs -->
+                    <div class="bg-stone-charcoal border border-white/5 p-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-stone-muted block">Estimated Requirement</span>
+                            <div class="border-b border-white/10 pb-4">
+                                <span class="text-xs text-stone-cream/60">Net Quantity:</span>
+                                <div class="text-2xl font-serif text-stone-cream mt-1" id="outNet">100.00 LF</div>
+                            </div>
+                            <div class="border-b border-white/10 pb-4">
+                                <span class="text-xs text-stone-cream/60">Waste Margin:</span>
+                                <div class="text-xl font-serif text-stone-sand mt-1" id="outWaste">+ 10.00 LF</div>
+                            </div>
+                            <div>
+                                <span class="text-xs text-stone-cream/60 font-medium">Total Recommended Order:</span>
+                                <div class="text-4xl font-serif text-stone-sand font-semibold mt-1" id="outTotal">110.00 LF</div>
+                            </div>
+                        </div>
+
+                        <button onclick="calculateEst()" class="w-full bg-stone-sand hover:bg-stone-cream text-stone-charcoal text-xs tracking-widest uppercase font-semibold py-4.5 mt-8 transition-all duration-300">
+                            Calculate Total
+                        </button>
+                    </div>
+                </div>
+                <p class="text-[10px] text-stone-cream/40 mt-6 text-center italic">
+                    Note: Calculations are direct estimates. Custom carvings (columns, mantels) are architectural items crafted strictly per CAD drawings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Consultation & Booking (Clean Minimalist Form) -->
+    <section id="contact" class="py-24 bg-stone-cream border-t border-stone-charcoal/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Contact Info & Showroom -->
+                <div class="lg:col-span-5 space-y-8">
+                    <span class="text-xs uppercase tracking-[0.25em] text-stone-sand font-semibold block">Let's Build Something Solid</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-light text-stone-charcoal tracking-wide">
+                        Visit Our Mesquite Studio & Showroom
+                    </h2>
+                    <p class="text-sm text-stone-muted leading-relaxed font-light">
+                        Architects, custom builders, and homeowners are always welcome to our showroom to witness the master stonemasons at work and handle real stone profiles first-hand.
+                    </p>
+                    
+                    <div class="space-y-4 text-xs tracking-widest uppercase text-stone-charcoal">
+                        <div>
+                            <span class="text-stone-sand block font-bold mb-1">Our Showroom</span>
+                            <span class="text-stone-muted normal-case font-normal">12904 Eastgate Dr., Suite D, Mesquite, TX 75181</span>
+                        </div>
+                        <div>
+                            <span class="text-stone-sand block font-bold mb-1">Office Phone</span>
+                            <a href="tel:+19722039816" class="hover:text-stone-sand text-stone-charcoal transition-colors normal-case font-normal">+1 (972) 203-9816</a>
+                        </div>
+                        <div>
+                            <span class="text-stone-sand block font-bold mb-1">Inquiries</span>
+                            <a href="mailto:info@dallaslimestone.com" class="hover:text-stone-sand text-stone-charcoal transition-colors normal-case font-normal">info@dallaslimestone.com</a>
+                        </div>
+                        <div>
+                            <span class="text-stone-sand block font-bold mb-1">Studio Hours</span>
+                            <span class="text-stone-muted normal-case font-normal">Monday – Friday: 8:00am to 5:30pm<br>Saturday: By Appointment Only</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultation Request Form -->
+                <div class="lg:col-span-7 bg-white border border-stone-charcoal/10 p-8 md:p-12 shadow-sm">
+                    <h3 class="font-serif text-2xl font-light text-stone-charcoal mb-6">Stonework Consultation Request</h3>
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">First Name</label>
+                                <input type="text" required class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">Last Name</label>
+                                <input type="text" required class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">Email Address</label>
+                                <input type="email" required class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">Phone Number</label>
+                                <input type="tel" required class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">Type of Service</label>
+                            <select class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors">
+                                <option>Architectural Columns / Bases</option>
+                                <option>Mantels & Fireplaces</option>
+                                <option>Pool Coping & Patio Pavers</option>
+                                <option>Cantera Custom Stonework</option>
+                                <option>Thin Veneer / Building Facade</option>
+                                <option>Stone CAD Drawings / Planning</option>
+                                <option>Restoration & Repairs</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest text-stone-muted font-semibold mb-2">Project Details</label>
+                            <textarea rows="4" placeholder="Describe your residential or commercial project..." class="w-full bg-stone-cream/50 border border-stone-charcoal/10 px-4 py-3 text-sm focus:outline-none focus:border-stone-sand transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-stone-charcoal text-stone-cream text-xs tracking-widest uppercase font-semibold py-4 hover:bg-stone-sand hover:text-stone-charcoal transition-all duration-300">
+                            Submit Consultation Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Cooper Stone Protective Heritage & Disclaimer Style) -->
+    <footer class="bg-stone-charcoal text-stone-cream border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/5">
+                <!-- Branding Left -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="font-serif text-lg tracking-[0.2em] text-stone-cream uppercase block">Dallas Limestone</span>
+                    <p class="text-xs text-stone-cream/60 leading-relaxed font-light max-w-sm">
+                        Combining classical European masonry design with locally direct Texas premium stone. Trusted by elite homebuilders since 1999.
+                    </p>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="md:col-span-3 space-y-4">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-sand font-semibold block">Navigation</span>
+                    <ul class="space-y-2 text-xs text-stone-cream/70 font-light">
+                        <li><a href="#about" class="hover:text-stone-sand transition-colors">Our Story</a></li>
+                        <li><a href="#portfolio" class="hover:text-stone-sand transition-colors">Stone Catalog</a></li>
+                        <li><a href="#calculator" class="hover:text-stone-sand transition-colors">Coping Estimator</a></li>
+                        <li><a href="#contact" class="hover:text-stone-sand transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Disclaimer block (highly inspired by Cooper Stone's disclaimer regarding natural variation) -->
+                <div class="md:col-span-4 space-y-4 text-[10px] text-stone-cream/40 leading-relaxed font-light">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-sand font-semibold block">Natural Stone Disclaimer</span>
+                    <p>
+                        Dallas Limestone is a raw product of nature. Products of nature inherently lack complete uniformity and are subject to variations in aesthetics, coloring, shade, natural structural fissures, hardness, and durability. We encourage visitors to visit our Mesquite showroom to visually select stone patterns before architectural carving.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom legal and credits -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] tracking-widest text-stone-cream/50 uppercase space-y-4 sm:space-y-0">
+                <span>© 1999–2026 Dallas Limestone LLC. All Rights Reserved.</span>
+                <span>Designed with attention to detail and craftsmanship</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio visual filter (Faber CNK inspired layout filtering)
+        function filterCatalog(category) {
+            const items = document.querySelectorAll('.catalog-item');
+            const tabs = document.querySelectorAll('.catalog-tab');
+
+            // Toggle active tabs visually
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-stone-charcoal', 'text-stone-cream');
+                tab.classList.add('border-stone-charcoal/20');
+            });
+            document.getElementById(`tab-${category}`).classList.remove('border-stone-charcoal/20');
+            document.getElementById(`tab-${category}`).classList.add('bg-stone-charcoal', 'text-stone-cream');
+
+            // Hide/Show items smoothly
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => item.style.opacity = '1', 50);
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => item.style.display = 'none', 300);
+                }
+            });
+        }
+
+        // Estimator Tool Scripts
+        function updateCalculatorUnits() {
+            const calcType = document.getElementById('calcType').value;
+            const inputLabel = document.getElementById('inputLabel');
+            const calcInput = document.getElementById('calcInput');
+
+            if (calcType === 'pool-coping') {
+                inputLabel.innerText = "Linear Feet Needed";
+                calcInput.placeholder = "Enter linear feet";
+            } else {
+                inputLabel.innerText = "Square Footage Needed";
+                calcInput.placeholder = "Enter square footage";
+            }
+            calculateEst();
+        }
+
+        function calculateEst() {
+            const calcType = document.getElementById('calcType').value;
+            const inputVal = parseFloat(document.getElementById('calcInput').value) || 0;
+            const wasteFactor = parseFloat(document.getElementById('calcWaste').value) || 1.10;
+            
+            const suffix = (calcType === 'pool-coping') ? ' LF' : ' SQFT';
+
+            const netVal = inputVal;
+            const totalVal = inputVal * wasteFactor;
+            const wasteVal = totalVal - netVal;
+
+            document.getElementById('outNet').innerText = netVal.toFixed(2) + suffix;
+            document.getElementById('outWaste').innerText = "+ " + wasteVal.toFixed(2) + suffix;
+            document.getElementById('outTotal').innerText = totalVal.toFixed(2) + suffix;
+        }
+
+        // Run initial calculation
+        calculateEst();
+    </script>
+</body>
+</html>
