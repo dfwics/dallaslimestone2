@@ -22,10 +22,10 @@
 .btn:hover { transform: translateY(-1px); }
 .btn-primary {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-dark);
   border-color: var(--color-accent);
 }
-.btn-primary:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); color: #fff; }
+.btn-primary:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); color: var(--color-on-dark); }
 .btn-secondary {
   background: transparent;
   color: var(--color-text);
@@ -35,10 +35,32 @@
 .btn-block { width: 100%; justify-content: center; }
 .btn-sm { padding: 8px 16px; font-size: var(--fs-small); }
 
-/* ---- Hero ---- */
+/* Buttons sitting on a dark surface (dark hero) */
+.hero .btn-secondary {
+  background: transparent;
+  color: var(--color-on-dark);
+  border-color: var(--color-dark-border);
+}
+.hero .btn-secondary:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---- Hero ----
+   Full-dark quarry-slate block, echoing a dark cinematic stone-yard hero.
+   A faint brass glow sits behind the copy the way quarry lighting rakes
+   across a cut face. */
 .hero {
   padding: var(--sp-8) 0 var(--sp-6);
+  background:
+    radial-gradient(ellipse 900px 500px at 15% 0%, rgba(165,129,62,0.16), transparent 60%),
+    var(--color-dark);
+  color: var(--color-on-dark);
 }
+.hero .eyebrow { color: var(--color-accent); }
+.hero .eyebrow::before { background: var(--color-accent); }
+.hero h1 { color: var(--color-on-dark); }
+.hero p.muted, .hero .muted { color: var(--color-on-dark-muted); }
 .hero-grid {
   display: grid;
   gap: var(--sp-4);
@@ -53,6 +75,17 @@
   flex-wrap: wrap;
   gap: var(--sp-2);
   margin-top: var(--sp-3);
+}
+.hero .img-placeholder {
+  border-color: var(--color-dark-border);
+  background:
+    repeating-linear-gradient(135deg, var(--color-dark-2), var(--color-dark-2) 10px, var(--color-dark) 10px, var(--color-dark) 20px);
+  color: var(--color-on-dark-muted);
+}
+.hero .img-placeholder span {
+  background: var(--color-dark-2);
+  border-color: var(--color-dark-border);
+  color: var(--color-on-dark);
 }
 
 /* ---- Cards (materials/services shared grid) ---- */
@@ -80,12 +113,13 @@
   gap: 10px;
   font: inherit;
   color: inherit;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
   border-top: 3px solid var(--color-accent);
 }
 .card:hover, .card:focus-visible {
-  box-shadow: 0 8px 22px rgba(43,36,29,0.10);
+  box-shadow: 0 10px 26px rgba(23,20,15,0.12);
   border-color: var(--color-accent);
+  transform: translateY(-2px);
 }
 .card-icon {
   width: 40px; height: 40px;
@@ -137,7 +171,7 @@
 .chip[aria-pressed="true"] {
   background: var(--color-accent);
   border-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-dark);
 }
 
 /* ---- Image placeholders ----

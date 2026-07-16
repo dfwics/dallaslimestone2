@@ -2,34 +2,45 @@
    Dallas Limestone — base.css
    Reset, design tokens, typography.
 
-   Design language: quarried limestone & hand-carved cantera. The accent is
-   an oxide-rust, the color iron leaves behind in cut stone. Section breaks
-   are styled as masonry "courses" (see .course-rule in layout.css) rather
-   than plain hairlines, because coursing is literally how this material is
-   laid.
+   Design language: "quarry editorial" — a dark charcoal & brass palette
+   inspired by premium Texas stone suppliers (deep quarry-slate darks, a
+   warm brass/gold quarried-mineral accent, cream limestone surfaces for
+   content). Headlines lean on a tall serif with occasional italic accent
+   words, section labels get a short brass "kicker" rule, and the header/
+   footer/hero go full dark for a cinematic, high-end material feel. Section
+   breaks are styled as masonry "courses" (see .course-rule in layout.css)
+   rather than plain hairlines, because coursing is literally how this
+   material is laid.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* ---- Color: quarry tan, oxide rust, wet-stone charcoal ---- */
-  --color-bg:          #EAE3D4;   /* quarry dust / cut limestone */
-  --color-surface:     #F7F3E8;   /* lighter block face, for cards */
-  --color-surface-2:   #DFD6C2;   /* recessed panels, alt rows */
-  --color-text:        #2B241D;  /* wet limestone shadow, warm near-black */
-  --color-text-muted:  #6E6153;
-  --color-accent:      #96402C;  /* oxide rust — iron staining in cantera */
-  --color-accent-dark: #742F21;
-  --color-accent-tint: #E9D4C6;  /* faint accent wash for hover/active */
-  --color-border:      #D2C6AE;
-  --color-focus:       #1F6F6B;  /* teal focus ring — visible against rust & tan */
+  /* ---- Color: cream limestone, brass/gold mineral accent, quarry-dark ---- */
+  --color-bg:          #F3EEE1;   /* cut limestone / cream stone face */
+  --color-surface:     #FFFFFF;   /* card / panel face */
+  --color-surface-2:   #E9E1CB;   /* recessed panels, alt rows */
+  --color-text:        #1D1A15;  /* quarry-slate, warm near-black */
+  --color-text-muted:  #675D4C;
+  --color-accent:      #A5813E;  /* brass / quarried mineral gold */
+  --color-accent-dark: #86651F;
+  --color-accent-tint: #F1E3C2;  /* faint accent wash for hover/active */
+  --color-border:      #DDD2B7;
+  --color-focus:       #1F6F6B;  /* teal focus ring — visible against brass & cream */
+
+  /* ---- Dark quarry surfaces: header, hero, footer ---- */
+  --color-dark:        #17140F;
+  --color-dark-2:      #211C14;
+  --color-dark-border: rgba(243,238,225,0.14);
+  --color-on-dark:       #F3EEE1;
+  --color-on-dark-muted: #B7AB92;
 
   /* ---- Type ---- */
   --font-display: "Fraunces", Georgia, serif;
   --font-body:    "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --fs-h1: clamp(2rem, 1.6rem + 1.8vw, 2.75rem);
-  --fs-h2: 1.5rem;
+  --fs-h1: clamp(2.1rem, 1.6rem + 2vw, 3rem);
+  --fs-h2: 1.55rem;
   --fs-h3: 1.125rem;
   --fs-body: 1rem;
   --fs-small: 0.875rem;
@@ -77,14 +88,23 @@ img { max-width: 100%; display: block; }
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   margin: 0 0 var(--sp-2);
   color: var(--color-text);
 }
 
-h1 { font-size: var(--fs-h1); font-weight: 700; }
+h1 { font-size: var(--fs-h1); font-weight: 700; letter-spacing: -0.015em; }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); font-weight: 600; }
+
+/* Editorial italic accent — used sparingly inside headlines for emphasis,
+   the way a stone yard's marketing site sets off one phrase per headline. */
+h1 em, h2 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-accent);
+}
 
 p { margin: 0 0 var(--sp-2); color: var(--color-text); }
 p.muted, .muted { color: var(--color-text-muted); }
@@ -100,11 +120,22 @@ a:hover { color: var(--color-accent); }
   font-family: var(--font-body);
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--sp-2);
+}
+/* Brass "kicker" rule ahead of section labels */
+.eyebrow::before {
+  content: "";
   display: inline-block;
-  margin-bottom: var(--sp-1);
+  width: 26px;
+  height: 2px;
+  background: var(--color-accent);
+  flex-shrink: 0;
 }
 
 /* Visible focus states everywhere */
@@ -134,7 +165,8 @@ select:focus-visible,
   left: var(--sp-2);
   top: -60px;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-dark);
+  font-weight: 600;
   padding: var(--sp-1) var(--sp-2);
   border-radius: var(--radius-sm);
   z-index: 1000;
